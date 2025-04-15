@@ -6,6 +6,7 @@ import {
 	validateLikes,
 	validateName,
 } from '@/utils/validators'
+import Image from 'next/image'
 import {
 	Button,
 	Input,
@@ -217,7 +218,9 @@ export default function EditMemeModal({
 									</label>
 									<div className='relative w-full aspect-[4/3] bg-gray-700 rounded overflow-hidden'>
 										{previewUrl ? (
-											<img
+											<Image
+												width={400}
+												height={300}
 												src={previewUrl}
 												alt='Preview'
 												className='object-contain w-full h-full'

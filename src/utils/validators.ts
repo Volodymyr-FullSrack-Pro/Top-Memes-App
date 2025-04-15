@@ -40,7 +40,8 @@ export function validateImageUrl(url: string): string | null {
 			return 'URL must point to an image (JPG, JPEG, PNG, GIF, WEBP)'
 		}
 	} catch (error) {
-		return 'Invalid URL format'
+		console.error('Invalid URL:', error)
+		return 'Invalid URL format '
 	}
 
 	return null

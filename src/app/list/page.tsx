@@ -4,6 +4,7 @@ import { getMemeDataFromLocalStorage } from '@/utils/localStorageHelper'
 import { Meme } from '@/utils/types'
 import { Card, Spinner } from '@heroui/react'
 import { Heart } from 'lucide-react'
+import Image from 'next/image'
 import { useEffect, useState } from 'react'
 
 export default function ListPage() {
@@ -47,7 +48,9 @@ export default function ListPage() {
 							onPress={() => window.open(meme.imageUrl, '_blank')}
 						>
 							<div className='relative w-full aspect-square sm:aspect-[4/3] overflow-hidden bg-gray-800'>
-								<img
+								<Image
+									width={400}
+									height={300}
 									src={meme.imageUrl}
 									alt={meme.name}
 									className='absolute inset-0 w-full h-full object-cover object-center'

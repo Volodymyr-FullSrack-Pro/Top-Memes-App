@@ -1,15 +1,28 @@
 import { Meme } from './types'
 
+type ImgflipMeme = {
+	id: string
+	name: string
+	url: string
+	width: number
+	height: number
+	box_count: number
+}
+
+type ImgflipResponse = {
+	success: boolean
+	data: {
+		memes: ImgflipMeme[]
+	}
+}
+
 export async function fetchMemes(): Promise<Meme[]> {
 	try {
 		const response = await fetch('https://api.imgflip.com/get_memes')
-		const data = await response.json()
-
-		console.log(data)
+		const data: ImgflipResponse = await response.json()
 
 		if (data.success) {
-			// Take first 10 memes and transform them to our Meme format
-			const memes = data.data.memes.slice(0, 20).map((meme: any, index: number) => ({
+			const memes = data.data.memes.slice(0, 20).map((meme, index) => ({
 				id: index + 1,
 				name: meme.name,
 				imageUrl: meme.url,
