@@ -53,13 +53,11 @@ export default function EditMemeModal({ isOpen, onClose, meme, onSave }: EditMem
     }
   }, [meme]);
 
-  // Проверка URL и загрузка превью при изменении URL
   useEffect(() => {
     const validateUrl = async () => {
       const error = validateImageUrl(formData.imageUrl);
       setErrors(prev => ({ ...prev, imageUrl: error }));
 
-      // Если URL валиден, обновляем предпросмотр
       if (!error && formData.imageUrl) {
         setPreviewUrl(formData.imageUrl);
         setIsPreviewError(false);
@@ -99,7 +97,6 @@ export default function EditMemeModal({ isOpen, onClose, meme, onSave }: EditMem
       [field]: value,
     }));
 
-    // Валидация при изменении
     if (field === 'name') {
       setErrors(prev => ({ ...prev, name: validateName(value as string) }));
     } else if (field === 'likes') {
@@ -107,7 +104,6 @@ export default function EditMemeModal({ isOpen, onClose, meme, onSave }: EditMem
     }
   };
 
-  // Проверка возможности сохранения формы
   const canSave = !errors.name && !errors.imageUrl && !errors.likes && !isPreviewError;
 
   if (!meme) return null;
