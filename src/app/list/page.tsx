@@ -1,3 +1,5 @@
+'use client'
+
 import { Card, Spinner } from '@heroui/react';
 import { Heart } from 'lucide-react';
 import Image from 'next/image';
@@ -5,7 +7,6 @@ import { useEffect, useState } from 'react';
 import { getMemeDataFromLocalStorage } from '@/utils/localStorageHelper';
 import { Meme } from '@/utils/types';
 
-('use client');
 
 export default function ListPage() {
   const [memes, setMemes] = useState<Meme[]>([]);

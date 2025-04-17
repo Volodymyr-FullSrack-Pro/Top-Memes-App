@@ -1,3 +1,5 @@
+'use client'
+
 import {
   Button,
   Spinner,
@@ -14,7 +16,6 @@ import EditMemeModal from '@/components/EditMemeModal';
 import { getMemeDataFromLocalStorage, updateMeme } from '@/utils/localStorageHelper';
 import { Meme } from '@/utils/types';
 
-('use client');
 
 export default function TablePage() {
   const [memes, setMemes] = useState<Meme[]>([]);

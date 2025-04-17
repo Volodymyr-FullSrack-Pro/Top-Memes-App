@@ -1,7 +1,8 @@
+'use client'
+
 import { Link, Navbar, NavbarBrand, NavbarContent, NavbarItem } from '@heroui/react';
 import { usePathname } from 'next/navigation';
 
-('use client');
 
 export default function MainNavbar() {
   const pathname = usePathname();

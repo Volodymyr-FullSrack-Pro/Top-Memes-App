@@ -1,7 +1,7 @@
+'use client';
+
 import { fetchMemes } from './api';
 import { Meme } from './types';
-
-('use client');
 
 const MEME_DATA_KEY = 'meme_data';
 

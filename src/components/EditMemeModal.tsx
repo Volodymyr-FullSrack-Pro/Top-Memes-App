@@ -1,3 +1,5 @@
+'use client'
+
 import {
   Button,
   Input,
@@ -13,7 +15,6 @@ import React, { useEffect, useState } from 'react';
 import { Meme } from '@/utils/types';
 import { validateImageUrl, validateLikes, validateName } from '@/utils/validators';
 
-('use client');
 
 interface EditMemeModalProps {
   isOpen: boolean;
