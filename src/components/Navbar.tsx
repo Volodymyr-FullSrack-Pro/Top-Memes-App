@@ -24,11 +24,10 @@ export default function MainNavbar() {
 				<NavbarItem isActive={pathname === '/table'}>
 					<Link
 						href='/table'
-						className={`text-white hover:text-blue-300 px-4 py-2 rounded-lg transition-all duration-200 ${
-							pathname === '/table'
-								? 'bg-blue-900 shadow-[0_0_8px_rgba(59,130,246,0.7)] border border-blue-500'
-								: 'hover:bg-gray-800'
-						}`}
+						className={`text-white hover:text-blue-300 px-4 py-2 rounded-lg transition-all duration-200 ${pathname === '/table'
+							? 'bg-blue-900 shadow-[0_0_8px_rgba(59,130,246,0.7)] border border-blue-500'
+							: 'hover:bg-gray-800'
+							}`}
 					>
 						Table View
 					</Link>
@@ -37,11 +36,10 @@ export default function MainNavbar() {
 				<NavbarItem isActive={pathname === '/list'}>
 					<Link
 						href='/list'
-						className={`text-white hover:text-blue-300 px-4 py-2 rounded-lg transition-all duration-200 ${
-							pathname === '/list'
-								? 'bg-blue-900 shadow-[0_0_8px_rgba(59,130,246,0.7)] border border-blue-500'
-								: 'hover:bg-gray-800'
-						}`}
+						className={`text-white hover:text-blue-300 px-4 py-2 rounded-lg transition-all duration-200 ${pathname === '/list'
+							? 'bg-blue-900 shadow-[0_0_8px_rgba(59,130,246,0.7)] border border-blue-500'
+							: 'hover:bg-gray-800'
+							}`}
 					>
 						List View
 					</Link>

@@ -6,7 +6,6 @@ import {
 	validateLikes,
 	validateName,
 } from '@/utils/validators'
-import Image from 'next/image'
 import {
 	Button,
 	Input,
@@ -17,6 +16,7 @@ import {
 	ModalHeader,
 } from '@heroui/react'
 import { AlertCircle } from 'lucide-react'
+import Image from 'next/image'
 import React, { useEffect, useState } from 'react'
 
 interface EditMemeModalProps {
