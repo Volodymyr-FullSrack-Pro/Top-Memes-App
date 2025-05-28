@@ -4,7 +4,7 @@
 
 # TOP-MEM-APP
 
-### [Site link] https://top-memes-app.vercel.app/)
+### [Site link] https://top-memes-app.vercel.app/
 
 ### Author
 
